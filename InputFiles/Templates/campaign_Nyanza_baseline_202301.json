@@ -3770,6 +3770,44 @@
             }
         },
         {
+            "Event_Name": "Change intervention status for those initiating Effective ART",
+            "class": "CampaignEventByYear",
+            "Nodeset_Config": { "class": "NodeSetAll" },
+            "Start_Year": 1980,
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [ "EffectiveART" ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "PropertyValueChanger",
+                        "Target_Property_Key": "InterventionStatus",
+                        "Target_Property_Value": "OnEffectiveART"
+                    }
+                }
+            }
+        },
+        {
+            "Event_Name": "Change intervention status for those initiating NonSuppressive ART",
+            "class": "CampaignEventByYear",
+            "Nodeset_Config": { "class": "NodeSetAll" },
+            "Start_Year": 1980,
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [ "NonSuppressiveART" ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "PropertyValueChanger",
+                        "Target_Property_Key": "InterventionStatus",
+                        "Target_Property_Value": "OnNonSuppressiveART"
+                    }
+                }
+            }
+        },
+        {
             "Event_Name": "OnART: state 2 (delay to dropout)",
             "Nodeset_Config": {
                 "class": "NodeSetAll"
