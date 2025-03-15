@@ -1,6 +1,6 @@
 {
     "Campaign_Name": "Baseline campaign for Nyanza Region",
-    "COMMENT": "2025-03-14 - Baseline reference for emergency forecast of PEPFAR's impact",
+    "COMMENT": "2025-03-14 - Emergency forecast of PEPFAR's impact, 41% reduction in HIV services",
     "Events": [
         {
             "Event_Coordinator_Config": {
@@ -1470,8 +1470,8 @@
                         0.588525800440708,
                         0.740599127081007,
                         0.801857877001134,
-                        0.801857877001134,
-                        0.801857877001134
+                        0.47309615,
+                        0.47309615
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1538,8 +1538,8 @@
                         0.917237365539813,
                         0.926257152621066,
                         0.935352944701273,
-                        0.944356969201294,
-                        0.954583079525208
+                        0.55717061,
+                        0.55717061
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1606,8 +1606,8 @@
                         0.779461249338116,
                         0.807380504140789,
                         0.833456676073001,
-                        0.857816233413328,
-                        0.954583079525208
+                        0.51840689,
+                        0.56320402
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1674,8 +1674,8 @@
                         0.803887467870314,
                         0.803856287669553,
                         0.803778231069191,
-                        0.80370723156994,
-                        0.802324274364189
+                        0.47418727,
+                        0.47418727
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1738,8 +1738,8 @@
                         0.925487705409975,
                         0.913423362766501,
                         0.946559254895175,
-                        0.946559254895175,
-                        0.946559254895175
+                        0.55846996,
+                        0.55846996
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1806,8 +1806,8 @@
                         0.750394831975603,
                         0.773080406978138,
                         0.794803618693004,
-                        0.815291836184299,
-                        0.945207760795309
+                        0.49102249,
+                        0.55767258
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1866,8 +1866,8 @@
                         0.774610983311217,
                         0.784981535319481,
                         0.8,
-                        0.8,
-                        0.8
+                        0.472,
+                        0.472
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1922,8 +1922,8 @@
                         0.890621076910986,
                         0.949295578418089,
                         0.97635104676765,
-                        0.97635104676765,
-                        0.97635104676765
+                        0.57604712,
+                        0.57604712
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -1990,8 +1990,8 @@
                         0.864819347832365,
                         0.892152767647731,
                         0.918157749439182,
-                        0.942058254899052,
-                        0.97635104676765
+                        0.55581437,
+                        0.57604712
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -2050,8 +2050,8 @@
                         0.843930566452931,
                         0.789922018691818,
                         0.8,
-                        0.8,
-                        0.8
+                        0.472,
+                        0.472
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -2108,8 +2108,8 @@
                         0.916812562828057,
                         0.959193224812808,
                         0.97635104676765,
-                        0.97635104676765,
-                        0.97635104676765
+                        0.57604712,
+                        0.57604712
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -2176,8 +2176,8 @@
                         0.703589818418726,
                         0.738376804023551,
                         0.771813558318153,
-                        0.803493656754539,
-                        0.97635104676765
+                        0.474061257485178,
+                        0.57604712
                     ]
                 },
                 "Update_Period": 30.4166666666667,
@@ -2452,9 +2452,83 @@
                     "Trigger_Condition_List": [
                         "HCTTestingLoop0"
                     ],
-                    "class": "NodeLevelHealthTriggeredIV"
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 12775
                 },
                 "class": "StandardInterventionDistributionEventCoordinator"
+            }
+        },
+        {
+            "Event_Name": "HCTTestingLoop: state 0 (delay to next HCT), Decreased Testing Uptake Post-2004",
+            "COMMENT": "Post PEPFAR cancellation",
+            "class": "CampaignEventByYear",
+            "Start_Year": 2025,
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [
+                        "HCTTestingLoop0",
+                        "HCTTestingPEPFAR_Delayed",
+                        "HCTTestingLoop9"
+                    ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "HIVMuxer",
+                        "Muxer_Name": "HCTTestingLoop",
+                        "Max_Entries": 1,
+                        "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
+                        "Delay_Period_Exponential": 365,
+                        "Broadcast_Event": "HCTTestingLoop1",
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
+                    }
+                }
+            }
+        },
+        {
+            "Event_Name": "Delay Routine Testing Post PEPFAR Cancellation 2025",
+            "COMMENT": "Post PEPFAR cancellation, 51% chance of receiving Rapid Test",
+            "class": "CampaignEventByYear",
+            "Start_Year": 2025,
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [
+                        "HCTTestingLoop1"
+                    ],
+                    "Actual_IndividualIntervention_Config": {
+                            "class": "HIVRandomChoice",
+                            "Choice_Names": ["HCTTestingPEPFAR_Delayed","HCTTestingLoopRapidTest"],
+                            "Choice_Probabilities": [0.41,0.59],
+                            "Disqualifying_Properties": [
+                                "CascadeState:LostForever",
+                                "CascadeState:LostForever_PEPFAR_cancelled",
+                                "CascadeState:OnART",
+                                "CascadeState:LinkingToART",
+                                "CascadeState:OnPreART",
+                                "CascadeState:LinkingToPreART",
+                                "CascadeState:ARTStaging"
+                            ],
+                            "New_Property_Value": "CascadeState:HCTTestingLoop"
+                        }
+                    }  
             }
         },
         {
@@ -2509,7 +2583,6 @@
             }
         },
         {
-            "END": "HCT TESTING LOOP",
             "Event_Name": "HCTTestingLoop: state 2 (HCT Testing Dropout)",
             "class": "CampaignEventByYear",
             "Nodeset_Config": { "class": "NodeSetAll" },
@@ -2518,6 +2591,7 @@
                 "class": "StandardInterventionDistributionEventCoordinator",
                 "Intervention_Config": {
                     "class": "NodeLevelHealthTriggeredIV",
+                    "Duration":12775,
                     "Trigger_Condition_List": [ "HCTTestingLoop2" ],
                     "Actual_IndividualIntervention_Config": {
                         "class": "HIVRandomChoice",
@@ -2539,6 +2613,40 @@
                             "CascadeState:LinkingToPreART",
                             "CascadeState:ARTStaging"
                         ]
+                    }
+                }
+            }
+        },
+        {
+            "END": "HCT TESTING LOOP",
+            "Event_Name": "HCTTestingLoop: state 2 (HCT Testing Dropout)",
+            "class": "CampaignEventByYear",
+            "Start_Year": 2025,
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [
+                        "HCTTestingLoop2"
+                    ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "HIVRandomChoice",
+                        "Choice_Names": ["HCTTestingLoop9","HCTUptakePostDebut1"],
+                        "Choice_Probabilities": [0.80,0.20],
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
                     }
                 }
             }

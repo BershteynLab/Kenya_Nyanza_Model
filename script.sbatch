@@ -10,14 +10,14 @@
 #SBATCH --partition=cpu_medium
 #SBATCH --mem=8GB
 
-#SBATCH --job-name=CROI_EMOD
-#SBATCH --chdir=/gpfs/data/bershteynlab/EMOD/citrod01/MATUMAINI/202301_Nyanza_MATUMAINI_MalariaOngoing
+#SBATCH --job-name=KEN_PEPFAR
+#SBATCH --chdir=/gpfs/data/bershteynlab/EMOD/citrod01/KEN_202301_Nyanza_Baseline_MalariaOngoing
 
 #SBATCH --mail-type=END
 
 #SBATCH --mail-user=daniel.citron@nyulangone.org
 
-#SBATCH --output=/gpfs/data/bershteynlab/EMOD/citrod01/MATUMAINI/202301_Nyanza_MATUMAINI_MalariaOngoing/slurm_%j.out
+#SBATCH --output=/gpfs/data/bershteynlab/EMOD/citrod01/KEN_202301_Nyanza_Baseline_MalariaOngoing/slurm_%j.out
 
 # python optim_script.py
 

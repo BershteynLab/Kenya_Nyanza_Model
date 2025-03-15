@@ -78,7 +78,11 @@
             "WillReceiveMedicalMaleCircumcision",
             "WillReceiveTraditionalMaleCircumcision",
             "EffectiveART",
-            "NonSuppressiveART"
+            "NonSuppressiveART",
+            "HCTTestingLoopRapidTest",
+            "PEPFAR_ART_Dropout", 
+            "PEPFAR_ART_Continue",
+            "HCTTestingPEPFAR_Delayed"
         ],
         "Custom_Node_Events": [],
         "Custom_Reports_Filename": "",
@@ -212,7 +216,14 @@
         "Report_HIV_ByAgeAndGender_Collect_Intervention_Data": [
         ],
         "Report_HIV_ByAgeAndGender_Collect_On_Art_Data": 0,
-        "Report_HIV_ByAgeAndGender_Event_Counter_List": [],
+        "Report_HIV_ByAgeAndGender_Event_Counter_List": [
+            "Needs_PMTCT_Diagnostic_Test",
+            "Program_VMMC",
+            "HCTTestingLoopRapidTest",
+            "PEPFAR_ART_Dropout",
+            "PEPFAR_ART_Continue",
+            "HCTTestingPEPFAR_Delayed"
+        ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
         "Report_HIV_ByAgeAndGender_Start_Year": 2000,
         "Report_HIV_ByAgeAndGender_Stop_Year": 2040,
