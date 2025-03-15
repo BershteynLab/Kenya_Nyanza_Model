@@ -10,7 +10,7 @@
 #SBATCH --partition=cpu_medium
 #SBATCH --mem=8GB
 
-#SBATCH --job-name=CROI_EMOD
+#SBATCH --job-name=KEN_PEPFAR
 #SBATCH --chdir=/gpfs/data/bershteynlab/EMOD/citrod01/MATUMAINI/202301_Nyanza_MATUMAINI_MalariaOngoing
 
 #SBATCH --mail-type=END
