@@ -4169,25 +4169,6 @@
             "Event_Coordinator_Config": {
                 "class": "StandardInterventionDistributionEventCoordinator",
                 "Demographic_Coverage": 1,
-                "Targeting_Config": {
-                    "class" : "TargetingLogic",
-                    "Logic" : [
-                        [
-                            {
-                                "class": "HasIntervention",
-                                "Is_Equal_To": 1,
-                                "Intervention_Name": "NotSuppressedOnART"
-                            }
-                        ],
-                        [
-                            {
-                                "class": "HasIntervention",
-                                "Is_Equal_To": 1,
-                                "Intervention_Name": "SuppressedOnART"
-                            }
-                        ]
-                    ]
-                },
                 "Intervention_Config": {
                     "class": "HIVRandomChoice",
                     "Choice_Probabilities": [0.41, 0.59],
