@@ -7,3 +7,4 @@ __pycache__/**
 model_0/**
 post_channel_config.json
 resampled_parameter_sets_short.csv
+*.out

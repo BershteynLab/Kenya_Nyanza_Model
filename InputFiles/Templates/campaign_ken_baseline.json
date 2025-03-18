@@ -106,7 +106,8 @@
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
                         "Disqualifying_Properties": [
-                            "InterventionStatus:LostForever"
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled"
                         ],
                         "Negative_Diagnosis_Event": "HCTUptakePostDebut3",
                         "Positive_Diagnosis_Event": "OnART1",
@@ -149,7 +150,8 @@
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
                         "Disqualifying_Properties": [
-                            "InterventionStatus:LostForever"
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled"
                         ],
                         "Negative_Diagnosis_Event": "LostForever0",
                         "Positive_Diagnosis_Event": "OnART1",
