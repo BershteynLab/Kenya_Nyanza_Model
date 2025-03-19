@@ -2492,7 +2492,7 @@
                         "Muxer_Name": "HCTTestingLoop",
                         "Max_Entries": 1,
                         "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
-                        "Delay_Period_Exponential": 365,
+                        "Delay_Period_Exponential": 730,
                         "Broadcast_Event": "HCTTestingLoop1",
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
