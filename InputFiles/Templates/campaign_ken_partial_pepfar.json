@@ -2435,6 +2435,9 @@
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
+                        "class": "HIVMuxer",
+                        "Muxer_Name": "HCTTestingLoop",
+                        "Max_Entries": 1,
                         "Broadcast_Event": "HCTTestingLoopRapidTest",
                         "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
                         "Delay_Period_Exponential": 730,
@@ -2447,9 +2450,7 @@
                             "InterventionStatus:LinkingToPreART",
                             "InterventionStatus:ARTStaging"
                         ],
-                        "Muxer_Name": "HCTTestingLoop",
-                        "New_Property_Value": "InterventionStatus:HCTTestingLoop",
-                        "class": "HIVMuxer"
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
                     },
                     "Trigger_Condition_List": [
                         "HCTTestingLoop0"
@@ -2515,20 +2516,26 @@
                         "HCTTestingLoop1"
                     ],
                     "Actual_IndividualIntervention_Config": {
-                            "class": "HIVRandomChoice",
-                            "Choice_Names": ["HCTTestingPEPFAR_Delayed","HCTTestingLoopRapidTest"],
-                            "Choice_Probabilities": [0.41,0.59],
-                            "Disqualifying_Properties": [
-                                "InterventionStatus:LostForever",
-                                "InterventionStatus:OnEffectiveART",
-                                "InterventionStatus:OnNonSuppressiveART",                                "InterventionStatus:LinkingToART",
-                                "InterventionStatus:OnPreART",
-                                "InterventionStatus:LinkingToPreART",
-                                "InterventionStatus:ARTStaging"
-                            ],
-                            "New_Property_Value": "InterventionStatus:HCTTestingLoop"
-                        }
-                    }  
+                        "class": "HIVRandomChoice",
+                        "Choice_Names": [
+                            "HCTTestingPEPFAR_Delayed",
+                            "HCTTestingLoopRapidTest"
+                        ],
+                        "Choice_Probabilities": [
+                            0.41,
+                            0.59
+                        ],
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",                                "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
+                    }
+                }  
             }
         },
         {

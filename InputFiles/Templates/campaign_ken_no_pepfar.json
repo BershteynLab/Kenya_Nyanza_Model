@@ -2525,21 +2525,21 @@
                         "HCTTestingLoop1"
                     ],
                     "Actual_IndividualIntervention_Config": {
-                            "class": "HIVRandomChoice",
-                            "Choice_Names": ["HCTTestingPEPFAR_Delayed","HCTTestingLoopRapidTest"],
-                            "Choice_Probabilities": [0.41,0.59],
-                            "Disqualifying_Properties": [
-                                "InterventionStatus:LostForever",
-                                "InterventionStatus:LostForever_PEPFAR_cancelled",
-                                "InterventionStatus:OnEffectiveART",
-                                "InterventionStatus:OnNonSuppressiveART",                                "InterventionStatus:LinkingToART",
-                                "InterventionStatus:OnPreART",
-                                "InterventionStatus:LinkingToPreART",
-                                "InterventionStatus:ARTStaging"
-                            ],
-                            "New_Property_Value": "InterventionStatus:HCTTestingLoop"
-                        }
-                    }  
+                        "class": "HIVRandomChoice",
+                        "Choice_Names": ["HCTTestingPEPFAR_Delayed","HCTTestingLoopRapidTest"],
+                        "Choice_Probabilities": [0.41,0.59],
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",                                "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
+                    }
+                }  
             }
         },
         {
