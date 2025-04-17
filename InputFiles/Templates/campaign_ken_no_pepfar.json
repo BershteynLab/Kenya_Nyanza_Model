@@ -2526,8 +2526,14 @@
                     ],
                     "Actual_IndividualIntervention_Config": {
                         "class": "HIVRandomChoice",
-                        "Choice_Names": ["HCTTestingPEPFAR_Delayed","HCTTestingLoopRapidTest"],
-                        "Choice_Probabilities": [0.41,0.59],
+                        "Choice_Names": [
+                            "HCTTestingPEPFAR_Delayed",
+                            "HCTTestingLoopRapidTest"
+                        ],
+                        "Choice_Probabilities": [
+                            0.41,
+                            0.59
+                        ],
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:LostForever_PEPFAR_cancelled",

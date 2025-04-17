@@ -1,4 +1,4 @@
 Scenario,Campaign
-ken_pepfar_baseline,campaign_ken_baseline.json
-ken_no_pepfar,campaign_ken_no_pepfar.json
-ken_partial_pepfar,campaign_ken_partial_pepfar.json
+test,campaign_ken_baseline.json
+test,campaign_ken_no_pepfar.json
+test,campaign_ken_partial_pepfar.json

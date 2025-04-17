@@ -106,8 +106,7 @@
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
                         "Disqualifying_Properties": [
-                            "InterventionStatus:LostForever",
-                            "InterventionStatus:LostForever_PEPFAR_cancelled"
+                            "InterventionStatus:LostForever"
                         ],
                         "Negative_Diagnosis_Event": "HCTUptakePostDebut3",
                         "Positive_Diagnosis_Event": "OnART1",
@@ -150,8 +149,7 @@
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
                         "Disqualifying_Properties": [
-                            "InterventionStatus:LostForever",
-                            "InterventionStatus:LostForever_PEPFAR_cancelled"
+                            "InterventionStatus:LostForever"
                         ],
                         "Negative_Diagnosis_Event": "LostForever0",
                         "Positive_Diagnosis_Event": "OnART1",
@@ -2435,9 +2433,6 @@
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
-                        "class": "HIVMuxer",
-                        "Muxer_Name": "HCTTestingLoop",
-                        "Max_Entries": 1,
                         "Broadcast_Event": "HCTTestingLoopRapidTest",
                         "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
                         "Delay_Period_Exponential": 730,
@@ -2450,7 +2445,9 @@
                             "InterventionStatus:LinkingToPreART",
                             "InterventionStatus:ARTStaging"
                         ],
-                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
+                        "Muxer_Name": "HCTTestingLoop",
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop",
+                        "class": "HIVMuxer"
                     },
                     "Trigger_Condition_List": [
                         "HCTTestingLoop0"
@@ -2613,7 +2610,6 @@
                         "New_Property_Value": "InterventionStatus:HCTTestingLoop",
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
-                            "InterventionStatus:LostForever_PEPFAR_cancelled",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",                            "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
