@@ -225,7 +225,6 @@
             "PEPFAR_ART_Dropout",
             "PEPFAR_ART_Continue",
             "HCTTestingPEPFAR_Delayed",
-            "HCTTestingLoopRapidTest",
             "HCTTestingLoop0",
             "HCTTestingLoop1",
             "HCTTestingLoop2"
