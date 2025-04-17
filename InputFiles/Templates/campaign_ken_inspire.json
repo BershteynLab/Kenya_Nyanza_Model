@@ -2510,7 +2510,7 @@
             }
         },
         {
-            "Event_Name": "Delay Routine Testing Post PEPFAR Cancellation 2025",
+            "Event_Name": "Delay Routine Testing Post PEPFAR Cancellation 2025 for adolescents and young adults",
             "COMMENT": "Post PEPFAR cancellation, X% chance of receiving Rapid Test; defaults to 59%",
             "class": "CampaignEventByYear",
             "Start_Year": 2025,
@@ -2521,6 +2521,9 @@
                 "class": "StandardInterventionDistributionEventCoordinator",
                 "Intervention_Config": {
                     "class": "NodeLevelHealthTriggeredIV",
+                    "Target_Age_Min": 15,
+                    "Target_Age_Max": 25,
+                    "Target_Demographic": "ExplicitAgeRanges",
                     "Trigger_Condition_List": [
                         "HCTTestingLoop1"
                     ],
@@ -2535,6 +2538,49 @@
                             0.59
                         ],
                         "Choice_Probabilities__KP__PEPFAR_testing_cancellation": "<== marker",
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop"
+                    }
+                }  
+            }
+        },
+        {
+            "Event_Name": "Delay Routine Testing Post PEPFAR Cancellation 2025 for adults over 25",
+            "COMMENT": "Post PEPFAR cancellation, X% chance of receiving Rapid Test; defaults to 59%",
+            "class": "CampaignEventByYear",
+            "Start_Year": 2025,
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Target_Age_Min": 25,
+                    "Target_Age_Max": 100,
+                    "Target_Demographic": "ExplicitAgeRanges",
+                    "Trigger_Condition_List": [
+                        "HCTTestingLoop1"
+                    ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "HIVRandomChoice",
+                        "Choice_Names": [
+                            "HCTTestingPEPFAR_Delayed",
+                            "HCTTestingLoopRapidTest"
+                        ],
+                        "Choice_Probabilities": [
+                            0.0,
+                            1.0
+                        ],
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:LostForever_PEPFAR_cancelled",
@@ -4211,7 +4257,7 @@
                 "Demographic_Coverage": 1,
                 "Target_Age_Min":15,
                 "Target_Age_Max":25,
-                "Target_Demographic":"ExplictAgeRanges",
+                "Target_Demographic":"ExplicitAgeRanges",
                 "Intervention_Config": {
                     "class": "HIVRandomChoice",
                     "Choice_Probabilities": [0.41, 0.59],

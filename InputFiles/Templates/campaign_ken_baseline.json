@@ -2536,7 +2536,8 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:LostForever_PEPFAR_cancelled",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
                             "InterventionStatus:ARTStaging"

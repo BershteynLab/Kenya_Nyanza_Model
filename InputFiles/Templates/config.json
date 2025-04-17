@@ -221,10 +221,10 @@
         "Report_HIV_ByAgeAndGender_Event_Counter_List": [
             "Needs_PMTCT_Diagnostic_Test",
             "Program_VMMC",
-            "HCTTestingLoopRapidTest",
             "PEPFAR_ART_Dropout",
             "PEPFAR_ART_Continue",
             "HCTTestingPEPFAR_Delayed",
+            "HCTTestingLoopRapidTest",
             "HCTTestingLoop0",
             "HCTTestingLoop1",
             "HCTTestingLoop2"

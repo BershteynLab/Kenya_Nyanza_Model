@@ -2677,7 +2677,6 @@
                     "Actual_IndividualIntervention_Config": {
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
-                            "InterventionStatus:LostForever_PEPFAR_cancelled",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
                             "InterventionStatus:LinkingToART",
