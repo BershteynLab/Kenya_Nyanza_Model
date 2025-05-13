@@ -2291,7 +2291,7 @@
                         ],
                         "Negative_Diagnosis_Event": "HCTUptakePostDebut1",
                         "New_Property_Value": "InterventionStatus:HCTUptakeAtDebut",
-                        "Positive_Diagnosis_Event": "HCTTestingLoop1",
+                        "Positive_Diagnosis_Event": "HCTTestingLoop0",
                         "Ramp_Max": 0.05,
                         "Ramp_MidYear": 2005,
                         "Ramp_Min": -0.005,
@@ -2509,7 +2509,8 @@
                         "class": "HIVMuxer"
                     },
                     "Trigger_Condition_List": [
-                        "HCTTestingLoop0"
+                        "HCTTestingLoop0",
+                        "HCTTestingLoop9"
                     ],
                     "class": "NodeLevelHealthTriggeredIV"
                 },
@@ -2538,7 +2539,7 @@
                             "InterventionStatus:ARTStaging"
                         ],
                         "Event_Or_Config": "Event",
-                        "Negative_Diagnosis_Event": "HCTTestingLoop0",
+                        "Negative_Diagnosis_Event": "HCTTestingLoop2",
                         "New_Property_Value": "InterventionStatus:HCTTestingLoop",
                         "Positive_Diagnosis_Event": "ARTStaging9",
                         "Sensitivity_Type": "VERSUS_TIME",
@@ -2566,6 +2567,42 @@
                     "class": "NodeLevelHealthTriggeredIV"
                 },
                 "class": "StandardInterventionDistributionEventCoordinator"
+            }
+        },
+        {
+            "END": "HCT TESTING LOOP",
+            "Event_Name": "HCTTestingLoop: state 2 (HCT Testing Dropout)",
+            "class": "CampaignEventByYear",
+            "Nodeset_Config": { "class": "NodeSetAll" },
+            "Start_Year": 1990,
+            "Event_Coordinator_Config": {
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Intervention_Config": {
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Trigger_Condition_List": [ "HCTTestingLoop2" ],
+                    "Actual_IndividualIntervention_Config": {
+                        "class": "HIVRandomChoice",
+                        "Choice_Names": [
+                            "HCTTestingLoop9",
+                            "HCTUptakePostDebut1"
+                        ],
+                        "Choice_Probabilities": [
+                            0.95,
+                            0.05
+                        ],
+                        "New_Property_Value": "InterventionStatus:HCTTestingLoop",
+                        "Disqualifying_Properties": [
+                            "InterventionStatus:LostForever",
+                            "InterventionStatus:LostForever_PEPFAR_cancelled",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ]
+                    }
+                }
             }
         },
         {

@@ -2237,7 +2237,7 @@
                         ],
                         "Negative_Diagnosis_Event": "HCTUptakePostDebut1",
                         "New_Property_Value": "InterventionStatus:HCTUptakeAtDebut",
-                        "Positive_Diagnosis_Event": "HCTTestingLoop1",
+                        "Positive_Diagnosis_Event": "HCTTestingLoop0",
                         "Ramp_Max": 0.05,
                         "Ramp_MidYear": 2005,
                         "Ramp_Min": -0.005,
@@ -2435,7 +2435,7 @@
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
-                        "Broadcast_Event": "HCTTestingLoopRapidTest",
+                        "Broadcast_Event": "HCTTestingLoop1",
                         "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
                         "Delay_Period_Exponential": 730,
                         "Disqualifying_Properties": [
@@ -2452,7 +2452,8 @@
                         "class": "HIVMuxer"
                     },
                     "Trigger_Condition_List": [
-                        "HCTTestingLoop0"
+                        "HCTTestingLoop0",
+                        "HCTTestingLoop9"
                     ],
                     "class": "NodeLevelHealthTriggeredIV"
                 },
@@ -2503,7 +2504,7 @@
                         "class": "HIVRapidHIVDiagnostic"
                     },
                     "Trigger_Condition_List": [
-                        "HCTTestingLoopRapidTest"
+                        "HCTTestingLoop1"
                     ],
                     "class": "NodeLevelHealthTriggeredIV"
                 },
@@ -2524,7 +2525,7 @@
                     "Actual_IndividualIntervention_Config": {
                         "class": "HIVRandomChoice",
                         "Choice_Names": [
-                            "HCTTestingLoop0",
+                            "HCTTestingLoop9",
                             "HCTUptakePostDebut1"
                         ],
                         "Choice_Probabilities": [
