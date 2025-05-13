@@ -21,4 +21,4 @@
 
 # python optim_script.py
 
-python run_scenarios.py -c optim_script.py --resample-method provided --samples resampled_parameter_sets.csv --output-dir pepfar_ken --suite-name pepfar_ken --table scenarios_inspire.csv
+python run_scenarios.py -c optim_script.py --resample-method provided --samples resampled_parameter_sets.csv --output-dir hivcontrol_ken --suite-name hivcontrol_ken --table scenarios.csv

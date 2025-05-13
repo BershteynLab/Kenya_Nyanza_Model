@@ -186,7 +186,7 @@
         "Report_HIV_ByAgeAndGender_Add_Concordant_Relationships": 0,
         "Report_HIV_ByAgeAndGender_Add_Relationships": 0,
         "Report_HIV_ByAgeAndGender_Add_Transmitters": 0,
-        "Report_HIV_ByAgeAndGender_Collect_Age_Bins_Data": [0,15,25,99],
+        "Report_HIV_ByAgeAndGender_Collect_Age_Bins_Data": [0,15,25,50,99],
         ".Report_HIV_ByAgeAndGender_Collect_Age_Bins_Data": [
             0,
             1,
@@ -208,11 +208,12 @@
             80,
             100
         ],
-        "Report_HIV_ByAgeAndGender_Collect_Circumcision_Data": 0,
+        "Report_HIV_ByAgeAndGender_Collect_Circumcision_Data": 1,
         "Report_HIV_ByAgeAndGender_Collect_Gender_Data": 1,
         "Report_HIV_ByAgeAndGender_Collect_HIV_Data": 0,
         "Report_HIV_ByAgeAndGender_Collect_HIV_Stage_Data": 0,
-        "Report_HIV_ByAgeAndGender_Collect_IP_Data": [
+        "Report_HIV_ByAgeAndGender_Collect_IP_Data": [],
+        ".Report_HIV_ByAgeAndGender_Collect_IP_Data": [
             "InterventionStatus"
         ],
         "Report_HIV_ByAgeAndGender_Collect_Intervention_Data": [

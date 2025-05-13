@@ -1,4 +1,3 @@
 Scenario,Campaign
-test,campaign_ken_baseline.json
-test,campaign_ken_no_pepfar.json
-test,campaign_ken_partial_pepfar.json
+test,campaign_Nyanza_baseline_202301.json
+test_pepfar_baseline,campaign_ken_baseline.json
