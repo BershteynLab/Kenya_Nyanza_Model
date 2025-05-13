@@ -6,8 +6,8 @@
 
 #SBATCH --cpus-per-task=1
 
-#SBATCH --time=05-00:00:00
-#SBATCH --partition=cpu_medium
+#SBATCH --time=4:00:00
+#SBATCH --partition=a100_dev
 #SBATCH --mem=8GB
 
 #SBATCH --job-name=KEN_PEPFAR

@@ -1,8 +1,4 @@
 Scenario,Campaign,Choice_Probabilities__KP__PEPFAR_ART_cancellation,Choice_Probabilities__KP__PEPFAR_testing_cancellation
-baseline,campaign_ken_inspire.json,"[0.0,1.0]","[0.0,1.0]"
-inspire_20,campaign_ken_inspire.json,"[0.2,1.0]","[0.2,1.0]"
-inspire_100,campaign_ken_inspire.json,"[1.0,0.0]","[1.0,0.0]"
-inspire_10,campaign_ken_inspire.json,"[0.1,0.9]","[0.1,0.9]"
-inspire_50,campaign_ken_inspire.json,"[0.5,0.5]","[0.5,0.5]"
-inspire_30,campaign_ken_inspire.json,"[0.3,0.7]","[0.3,0.7]"
-inspire_70,campaign_ken_inspire.json,"[0.7,0.3]","[0.7,0.3]"
+test_baseline,campaign_ken_inspire.json,"[0.0,1.0]","[0.0,1.0]"
+test_inspire_20,campaign_ken_inspire.json,"[0.2,0.8]","[0.2,0.8]"
+test_inspire_100,campaign_ken_inspire.json,"[1.0,0.0]","[1.0,0.0]"

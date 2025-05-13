@@ -213,7 +213,7 @@
         "Report_HIV_ByAgeAndGender_Collect_HIV_Data": 0,
         "Report_HIV_ByAgeAndGender_Collect_HIV_Stage_Data": 0,
         "Report_HIV_ByAgeAndGender_Collect_IP_Data": [
-            "Risk"
+            "InterventionStatus"
         ],
         "Report_HIV_ByAgeAndGender_Collect_Intervention_Data": [
         ],
@@ -227,7 +227,9 @@
             "HCTTestingLoopRapidTest",
             "HCTTestingLoop0",
             "HCTTestingLoop1",
-            "HCTTestingLoop2"
+            "HCTTestingLoop2",
+            "HCTTestingLoop9",
+            "HCTUptakePostDebut1"
         ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
         "Report_HIV_ByAgeAndGender_Start_Year": 2000,

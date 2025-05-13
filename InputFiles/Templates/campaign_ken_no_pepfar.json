@@ -2470,7 +2470,7 @@
             }
         },
         {
-            "Event_Name": "HCTTestingLoop: state 0 (delay to next HCT), Decreased Testing Uptake Post-2004",
+            "Event_Name": "HCTTestingLoop: state 0 (delay to next HCT), Decreased Testing Uptake Post-2025",
             "COMMENT": "Post PEPFAR cancellation",
             "class": "CampaignEventByYear",
             "Start_Year": 2025,
@@ -2511,7 +2511,7 @@
         },
         {
             "Event_Name": "Delay Routine Testing Post PEPFAR Cancellation 2025",
-            "COMMENT": "Post PEPFAR cancellation, 51% chance of receiving Rapid Test",
+            "COMMENT": "Post PEPFAR cancellation, 59% chance of receiving Rapid Test",
             "class": "CampaignEventByYear",
             "Start_Year": 2025,
             "Nodeset_Config": {
@@ -2538,7 +2538,8 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:LostForever_PEPFAR_cancelled",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",                                "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
                             "InterventionStatus:ARTStaging"
@@ -2626,7 +2627,8 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:LostForever_PEPFAR_cancelled",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
                             "InterventionStatus:ARTStaging"
