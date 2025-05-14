@@ -188,7 +188,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -245,8 +244,7 @@
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed"
+                            "InterventionStatus:OnNonSuppressiveART"
                         ],
                         "Negative_Diagnosis_Event": "ARTStaging1",
                         "New_Property_Value": "InterventionStatus:HCTTestingLoop",
@@ -293,7 +291,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -350,8 +347,7 @@
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed"
+                            "InterventionStatus:OnNonSuppressiveART"
                         ],
                         "Negative_Diagnosis_Event": "ARTStaging1",
                         "New_Property_Value": "InterventionStatus:HCTTestingLoop",
@@ -2283,7 +2279,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2325,7 +2320,6 @@
                         "InterventionStatus:LostForever",
                         "InterventionStatus:OnEffectiveART",
                         "InterventionStatus:OnNonSuppressiveART",
-                        "InterventionStatus:OnNonSuppressiveARTDepressed",
                         "InterventionStatus:LinkingToART",
                         "InterventionStatus:OnPreART",
                         "InterventionStatus:LinkingToPreART",
@@ -2376,7 +2370,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2416,7 +2409,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2532,7 +2524,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2615,7 +2606,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2683,7 +2673,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2756,7 +2745,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2807,7 +2795,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2884,7 +2871,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -2941,7 +2927,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -3028,7 +3013,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART",
@@ -3085,7 +3069,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3142,7 +3125,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3176,7 +3158,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3207,7 +3188,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3296,7 +3276,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3337,7 +3316,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3368,7 +3346,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART",
                             "InterventionStatus:LinkingToPreART"
@@ -3430,7 +3407,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART",
                             "InterventionStatus:OnPreART"
                         ],
@@ -3469,7 +3445,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART"
                         ],
                         "Muxer_Name": "PreART",
@@ -3507,7 +3482,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART"
                         ],
                         "New_Property_Value": "InterventionStatus:OnPreART",
@@ -3587,7 +3561,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART"
                         ],
                         "NOTE1": "Threshold for adult vs child guidelines",
@@ -3618,7 +3591,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART"
                         ],
                         "Event_Or_Config": "Event",
@@ -3649,7 +3621,6 @@
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
                             "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed",
                             "InterventionStatus:LinkingToART"
                         ],
                         "If_Active_TB": {
@@ -3710,8 +3681,7 @@
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed"
+                            "InterventionStatus:OnNonSuppressiveART"
                         ],
                         "Negative_Diagnosis_Event": "HCTUptakePostDebut3",
                         "New_Property_Value": "InterventionStatus:LinkingToART",
@@ -3799,8 +3769,7 @@
                         "Disqualifying_Properties": [
                             "InterventionStatus:LostForever",
                             "InterventionStatus:OnEffectiveART",
-                            "InterventionStatus:OnNonSuppressiveART",
-                            "InterventionStatus:OnNonSuppressiveARTDepressed"
+                            "InterventionStatus:OnNonSuppressiveART"
                         ]                        
                     }
                 }
