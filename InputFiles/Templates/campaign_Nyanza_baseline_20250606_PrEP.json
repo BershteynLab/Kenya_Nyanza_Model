@@ -1,5 +1,5 @@
 {
-    "Campaign_Name": "Baseline campaign for Nyanza Region",
+    "Campaign_Name": "Baseline campaign for Nyanza Region, including PrEP distribution",
     "Events": [
         {
             "Event_Coordinator_Config": {
@@ -1073,7 +1073,8 @@
             "class": "CampaignEvent"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION PRE-DATING VMMC PROGRAM",
+            "BEGIN": "MALE CIRCUMCISION",
+            "ALSO_BEGIN": "MALE CIRCUMCISION PRE-DATING VMMC PROGRAM",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1100,7 +1101,6 @@
             "class": "CampaignEventByYear"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1127,7 +1127,6 @@
             "class": "CampaignEventByYear"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1154,7 +1153,6 @@
             "class": "CampaignEventByYear"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1181,7 +1179,6 @@
             "class": "CampaignEventByYear"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1208,7 +1205,7 @@
             "class": "CampaignEventByYear"
         },
         {
-            "BEGIN": "MALE CIRCUMCISION",
+            "END": "MALE CIRCUMCISION PRE-DATING VMMC PROGRAM",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Choice_Names": [
@@ -1235,6 +1232,7 @@
             "class": "CampaignEventByYear"
         },
         {
+            "BEGIN": "ONGOING TRADITIONAL MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
@@ -1395,6 +1393,7 @@
             "class": "CampaignEventByYear"
         },
         {
+            "END": "ONGOING TRADITIONAL MALE CIRCUMCISION",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Actual_IndividualIntervention_Config": {
@@ -1427,6 +1426,7 @@
             "class": "CampaignEventByYear"
         },
         {
+            "BEGIN": "PROGRAM VMMC",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Cost_To_Consumer": 0.0,
@@ -2173,6 +2173,7 @@
             "class": "CampaignEventByYear"
         },
         {
+            "END": "PROGRAM VMMC",
             "Event_Coordinator_Config": {
                 "Intervention_Config": {
                     "Cost_To_Consumer": 0.0,
@@ -2267,6 +2268,2723 @@
                 "class": "NodeSetAll"
             },
             "Start_Year": 1961,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "BEGIN": "PREP DISTRIBUTION",
+            "Event_Name": "Distribute HIV Testing to adolescent girls and young women",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear",
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_AGYW",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 24.99999,
+                "Target_Age_Min": 15,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_AGYW": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            }
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_AGYW_l3m",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 24.99999,
+                "Target_Age_Min": 15,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class" : "HasHadMultiplePartnersInLastNumMonths",
+                                "Is_Equal_To": 1,
+                                "Num_Months_Type": "THREE_MONTHS",
+                                "Of_Relationship_Type": "NA"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_AGYW_l3m": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to adolescent girls and young women l3m",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_ABYM",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 24.99999,
+                "Target_Age_Min": 15,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Male",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_ABYM": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to adolescent boys and young men",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_ABYM_l3m",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 24.99999,
+                "Target_Age_Min": 15,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Male",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class" : "HasHadMultiplePartnersInLastNumMonths",
+                                "Is_Equal_To": 1,
+                                "Num_Months_Type": "THREE_MONTHS",
+                                "Of_Relationship_Type": "NA"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                    "Logic": [
+                                        [
+                                            {
+                                                "Is_Equal_To": 0,
+                                                "class": "IsHivPositive"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "Is_Equal_To": 1,
+                                                "class": "IsHivPositive"
+                                            }
+                                        ]
+                                    ],
+                                    "class": "TargetingLogic"
+                                    },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_ABYM_l3m": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to adolescent boys and young men l3m",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderW",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                    "Logic": [
+                                        [
+                                            {
+                                                "Is_Equal_To": 0,
+                                                "class": "IsHivPositive"
+                                            }
+                                        ]
+                                    ],
+                                    "class": "TargetingLogic"
+                                    },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                "Values__KP__PrEP_scaleup_OlderW": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older women",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderW_sd",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderW_sd": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older women sd",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderW_l3m",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class" : "HasHadMultiplePartnersInLastNumMonths",
+                                "Is_Equal_To": 1,
+                                "Num_Months_Type": "THREE_MONTHS",
+                                "Of_Relationship_Type": "NA"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderW_l3m": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older women l3m",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderW_l3m_sd",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Female",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class" : "HasHadMultiplePartnersInLastNumMonths",
+                                "Is_Equal_To": 1,
+                                "Num_Months_Type": "THREE_MONTHS",
+                                "Of_Relationship_Type": "NA"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderW_l3m_sd": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older women l3m sd",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderM",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Male",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderM": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older men",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderM_sd",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Male",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class": "HasMoreOrLessThanNumPartners",
+                                "Is_Equal_To": 1,
+                                "Of_Relationship_Type": "NA",
+                                "Num_Partners": 1,
+                                "More_Or_Less": "MORE"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 1,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderM_sd": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older men sd",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Days_to_Diagnosis": 0,
+                    "Event_or_Config": "Event",
+                    "Negative_Diagnosis_Event": "Initiate_PrEP_OlderM_l3m",
+                    "Positive_Diagnosis_Event": "Refer_to_ART",
+                    "Sensitivity_Type": "VERSUS_TIME",
+                    "Sensitivity_Versus_Time": {
+                        "Times": [
+                            0,
+                            19,
+                            22,
+                            30,
+                            45,
+                            60,
+                            90,
+                            120
+                        ],
+                        "Values": [
+                            0,
+                            0.2,
+                            0.37,
+                            0.78,
+                            0.865,
+                            0.95,
+                            0.97,
+                            0.999
+                        ],
+                        "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                    },
+                    "class": "HIVRapidHIVDiagnostic"
+                },
+                "Target_Age_Max": 49.99999,
+                "Target_Age_Min": 25,
+                "Target_Demographic": "ExplicitAgeRangesAndGender",
+                "Target_Gender": "Male",
+                "Targeting_Config": {
+                    "Logic": [
+                        [
+                            {
+                                "IP_Key_Value": "Known_Positive:False",
+                                "class": "HasIP"
+                            },
+                            {
+                                "class" : "HasHadMultiplePartnersInLastNumMonths",
+                                "Is_Equal_To": 1,
+                                "Num_Months_Type": "THREE_MONTHS",
+                                "Of_Relationship_Type": "NA"
+                            },
+                            {
+                                "With_Partner_Who": {
+                                "Logic": [
+                                    [
+                                        {
+                                            "Is_Equal_To": 0,
+                                            "class": "IsHivPositive"
+                                        }
+                                    ]
+                                ],
+                                "class": "TargetingLogic"
+                                },
+                                "class": "HasRelationship"
+                            },
+                            {
+                                "Intervention_Name": "PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            },
+                            {
+                                "Intervention_Name": "Oral_PrEP",
+                                "Is_Equal_To": 0,
+                                "class": "HasIntervention"
+                            }
+                        ]
+                    ],
+                    "class": "TargetingLogic"
+                },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                    "Values__KP__PrEP_scaleup_OlderM_l3m": "<==marker"
+                },
+                "Update_Period": 30.4166666666667,
+                "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older men l3m",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+            "Intervention_Config": {
+                "Days_to_Diagnosis": 0,
+                "Event_or_Config": "Event",
+                "Negative_Diagnosis_Event": "Initiate_PrEP_OlderM_l3m_sd",
+                "Positive_Diagnosis_Event": "Refer_to_ART",
+                "Sensitivity_Type": "VERSUS_TIME",
+                "Sensitivity_Versus_Time": {
+                    "Times": [
+                        0,
+                        19,
+                        22,
+                        30,
+                        45,
+                        60,
+                        90,
+                        120
+                    ],
+                    "Values": [
+                        0,
+                        0.2,
+                        0.37,
+                        0.78,
+                        0.865,
+                        0.95,
+                        0.97,
+                        0.999
+                    ],
+                    "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+               },
+               "class": "HIVRapidHIVDiagnostic"
+            },
+            "Target_Age_Max": 49.99999,
+            "Target_Age_Min": 25,
+            "Target_Demographic": "ExplicitAgeRangesAndGender",
+            "Target_Gender": "Male",
+            "Targeting_Config": {
+               "Logic": [
+                    [
+                        {
+                            "IP_Key_Value": "Known_Positive:False",
+                            "class": "HasIP"
+                        },
+                        {
+                            "class" : "HasHadMultiplePartnersInLastNumMonths",
+                            "Is_Equal_To": 1,
+                            "Num_Months_Type": "THREE_MONTHS",
+                            "Of_Relationship_Type": "NA"
+                        },
+                        {
+                            "With_Partner_Who": {
+                            "Logic": [
+                                [
+                                    {
+                                        "Is_Equal_To": 1,
+                                        "class": "IsHivPositive"
+                                    }
+                                ]
+                            ],
+                            "class": "TargetingLogic"
+                            },
+                            "class": "HasRelationship"
+                        },
+                        {
+                            "Intervention_Name": "PrEP",
+                            "Is_Equal_To": 0,
+                            "class": "HasIntervention"
+                        },
+                        {
+                            "Intervention_Name": "Oral_PrEP",
+                            "Is_Equal_To": 0,
+                            "class": "HasIntervention"
+                        }
+                    ]
+                ],
+                "class": "TargetingLogic"
+            },
+                "Time_Value_Map": {
+                    "Times": [
+                        2026,
+                        2029,
+                        2073.99,
+                        2074
+                    ],
+                    "Values": [
+                        0.0,
+                        0.6,
+                        0.6,
+                        0.0
+                    ],
+                "Values__KP__PrEP_scaleup_OlderM_l3m_sd": "<==marker"
+            },
+            "Update_Period": 30.4166666666667,
+            "class": "ReferenceTrackingEventCoordinator"
+            },
+            "Event_Name": "Distribute HIV Testing to older men l3m sd",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2023,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "New_PrEP_Initiated",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    30,
+                                    30.1
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Initiate_PrEP_AGYW",
+                        "Initiate_PrEP_AGYW_l3m"
+                    ],
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "IP_Key_Value": "OnPrEP:False",  
+                                    "class": "HasIP"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Newly Initiate PrEP AGYW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "New_PrEP_Initiated",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    30,
+                                    30.1
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Initiate_PrEP_ABYM",
+                        "Initiate_PrEP_ABYM_l3m"
+                    ],
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "IP_Key_Value": "OnPrEP:False",  
+                                    "class": "HasIP"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Newly Initiate PrEP ABYM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "New_PrEP_Initiated",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    30,
+                                    30.1
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Initiate_PrEP_OlderW",
+                        "Initiate_PrEP_OlderW_sd",
+                        "Initiate_PrEP_OlderW_l3m",
+                        "Initiate_PrEP_OlderW_l3m_sd"
+                    ],
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "IP_Key_Value": "OnPrEP:False",  
+                                    "class": "HasIP"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Newly Initiate PrEP OlderW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "New_PrEP_Initiated",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    30,
+                                    30.1
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Initiate_PrEP_OlderM",
+                        "Initiate_PrEP_OlderM_sd",
+                        "Initiate_PrEP_OlderM_l3m",
+                        "Initiate_PrEP_OlderM_l3m_sd"
+                    ],
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "IP_Key_Value": "OnPrEP:False",  
+                                    "class": "HasIP"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Newly Initiate PrEP OlderM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "PrEP_followup",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    90,
+                                    91
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Continue_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Follow up PrEP AGYW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "PrEP_followup",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    90,
+                                    91
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Continue_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Follow up PrEP ABYM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "PrEP_followup",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    90,
+                                    91
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Continue_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Follow up PrEP OlderW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Disqualifying_Properties": [
+                            "PrEP_Eligible:False",
+                            "Known_Positive:True",
+                            "InterventionStatus:OnEffectiveART",
+                            "InterventionStatus:OnNonSuppressiveART",
+                            "InterventionStatus:LinkingToART",
+                            "InterventionStatus:OnPreART",
+                            "InterventionStatus:LinkingToPreART",
+                            "InterventionStatus:ARTStaging"
+                        ],
+                        "Distributed_Event_Trigger": "PrEP_followup",
+                        "Duration_To_Wait_Before_Revaccination": 0,
+                        "Expired_Event_Trigger": "PrEP_Expired",
+                        "Intervention_Name": "PrEP",
+                        "New_Property_Value": "OnPrEP:True",
+                        "Vaccine_Type": "AcquisitionBlocking",
+                        "Waning_Config": {
+                            "Durability_Map": {
+                                "Times": [
+                                    0,
+                                    90,
+                                    91
+                                ],
+                                "Values": [
+                                    1.0,
+                                    1.0,
+                                    0
+                                ]
+                            },
+                            "Expire_At_Durability_Map_End": 1,
+                            "Initial_Effect": 0.75,
+                            "Initial_Effect__KP__PrEP": "<==marker",
+                            "class": "WaningEffectMapLinear"
+                        },
+                        "class": "ControlledVaccine"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Continue_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Follow up PrEP OlderM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Choice_Names": [
+                            "Return_for_PrEP",
+                            "No_return_for_PrEP"
+                        ],
+                        "Choice_Probabilities": [
+                            0.5,
+                            0.5
+                        ],
+                        "Choice_Probabilities__KP__PrEP_Return": "<==marker",
+                        "class": "HIVRandomChoice"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "With_Partner_Who": {
+                                        "Logic": [
+                                            [
+                                                {
+                                                    "Is_Equal_To": 0,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "Is_Equal_To": 1,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ]
+                                        ],
+                                        "class": "TargetingLogic"
+                                    },
+                                    "class": "HasRelationship"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "After PrEP expires, decide whether AGYW individual returns for next round of PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Choice_Names": [
+                            "Return_for_PrEP",
+                            "No_return_for_PrEP"
+                        ],
+                        "Choice_Probabilities": [
+                            0.5,
+                            0.5
+                        ],
+                        "Choice_Probabilities__KP__PrEP_Return": "<==marker",
+                        "class": "HIVRandomChoice"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "With_Partner_Who": {
+                                        "Logic": [
+                                            [
+                                                {
+                                                    "Is_Equal_To": 0,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "Is_Equal_To": 1,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ]
+                                        ],
+                                        "class": "TargetingLogic"
+                                    },
+                                    "class": "HasRelationship"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "After PrEP expires, decide whether ABYM individual returns for next round of PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Choice_Names": [
+                            "Return_for_PrEP",
+                            "No_return_for_PrEP"
+                        ],
+                        "Choice_Probabilities": [
+                            0.5,
+                            0.5
+                        ],
+                        "Choice_Probabilities__KP__PrEP_Return": "<==marker",
+                        "class": "HIVRandomChoice"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "With_Partner_Who": {
+                                        "Logic": [
+                                            [
+                                                {
+                                                    "Is_Equal_To": 0,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "Is_Equal_To": 1,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ]
+                                        ],
+                                        "class": "TargetingLogic"
+                                    },
+                                    "class": "HasRelationship"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "After PrEP expires, decide whether OlderW individual returns for next round of PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Choice_Names": [
+                            "Return_for_PrEP",
+                            "No_return_for_PrEP"
+                        ],
+                        "Choice_Probabilities": [
+                            0.5,
+                            0.5
+                        ],
+                        "Choice_Probabilities__KP__PrEP_Return": "<==marker",
+                        "class": "HIVRandomChoice"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Targeting_Config": {
+                        "Logic": [
+                            [
+                                {
+                                    "With_Partner_Who": {
+                                        "Logic": [
+                                            [
+                                                {
+                                                    "Is_Equal_To": 0,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "Is_Equal_To": 1,
+                                                    "class": "IsHivPositive"
+                                                }
+                                            ]
+                                        ],
+                                        "class": "TargetingLogic"
+                                    },
+                                    "class": "HasRelationship"
+                                }
+                            ]
+                        ],
+                        "class": "TargetingLogic"
+                    },
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "After PrEP expires, decide whether OlderM individual returns for next round of PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Days_to_Diagnosis": 0,
+                        "Event_or_Config": "Event",
+                        "Negative_Diagnosis_Event": "Continue_PrEP",
+                        "Positive_Diagnosis_Event": "Refer_to_ART",
+                        "Sensitivity_Type": "VERSUS_TIME",
+                        "Sensitivity_Versus_Time": {
+                            "Times": [
+                                0,
+                                19,
+                                22,
+                                30,
+                                45,
+                                60,
+                                90,
+                                120
+                            ],
+                            "Values": [
+                                0,
+                                0.2,
+                                0.37,
+                                0.78,
+                                0.865,
+                                0.95,
+                                0.97,
+                                0.999
+                            ],
+                            "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                        },
+                        "class": "HIVRapidHIVDiagnostic"
+                    },
+                    "COMMENT": "Decision to return for PrEP follow-up after initiation",
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Return_for_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Conduct HIV Testing at PrEP follow-up visit to check for eligibility AGYW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Days_to_Diagnosis": 0,
+                        "Event_or_Config": "Event",
+                        "Negative_Diagnosis_Event": "Continue_PrEP",
+                        "Positive_Diagnosis_Event": "Refer_to_ART",
+                        "Sensitivity_Type": "VERSUS_TIME",
+                        "Sensitivity_Versus_Time": {
+                            "Times": [
+                                0,
+                                19,
+                                22,
+                                30,
+                                45,
+                                60,
+                                90,
+                                120
+                            ],
+                            "Values": [
+                                0,
+                                0.2,
+                                0.37,
+                                0.78,
+                                0.865,
+                                0.95,
+                                0.97,
+                                0.999
+                            ],
+                            "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                        },
+                        "class": "HIVRapidHIVDiagnostic"
+                    },
+                    "COMMENT": "Decision to return for PrEP follow-up after initiation",
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Return_for_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Conduct HIV Testing at PrEP follow-up visit to check for eligibility ABYM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Days_to_Diagnosis": 0,
+                        "Event_or_Config": "Event",
+                        "Negative_Diagnosis_Event": "Continue_PrEP",
+                        "Positive_Diagnosis_Event": "Refer_to_ART",
+                        "Sensitivity_Type": "VERSUS_TIME",
+                        "Sensitivity_Versus_Time": {
+                            "Times": [
+                                0,
+                                19,
+                                22,
+                                30,
+                                45,
+                                60,
+                                90,
+                                120
+                            ],
+                            "Values": [
+                                0,
+                                0.2,
+                                0.37,
+                                0.78,
+                                0.865,
+                                0.95,
+                                0.97,
+                                0.999
+                            ],
+                            "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                        },
+                        "class": "HIVRapidHIVDiagnostic"
+                    },
+                    "COMMENT": "Decision to return for PrEP follow-up after initiation",
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "Return_for_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Conduct HIV Testing at PrEP follow-up visit to check for eligibility OlderW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "Days_to_Diagnosis": 0,
+                        "Event_or_Config": "Event",
+                        "Negative_Diagnosis_Event": "Continue_PrEP",
+                        "Positive_Diagnosis_Event": "Refer_to_ART",
+                        "Sensitivity_Type": "VERSUS_TIME",
+                        "Sensitivity_Versus_Time": {
+                            "Times": [
+                                0,
+                                19,
+                                22,
+                                30,
+                                45,
+                                60,
+                                90,
+                                120
+                            ],
+                            "Values": [
+                                0,
+                                0.2,
+                                0.37,
+                                0.78,
+                                0.865,
+                                0.95,
+                                0.97,
+                                0.999
+                            ],
+                            "Values__KP__Sensitivity_TVmap_PrEP": "<==marker"
+                        },
+                        "class": "HIVRapidHIVDiagnostic"
+                    },
+                    "COMMENT": "Decision to return for PrEP follow-up after initiation",
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Return_for_PrEP"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Conduct HIV Testing at PrEP follow-up visit to check for eligibility OlderM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "New_Property_Value": "",
+                        "Target_Property_Key": "OnPrEP",
+                        "Target_Property_Value": "False",
+                        "class": "PropertyValueChanger"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Remove OnPrEP Status after Expiry AGYW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "New_Property_Value": "",
+                        "Target_Property_Key": "OnPrEP",
+                        "Target_Property_Value": "False",
+                        "class": "PropertyValueChanger"
+                    },
+                    "Target_Age_Max": 24.99999,
+                    "Target_Age_Min": 15,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Remove OnPrEP Status after Expiry ABYM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "New_Property_Value": "",
+                        "Target_Property_Key": "OnPrEP",
+                        "Target_Property_Value": "False",
+                        "class": "PropertyValueChanger"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Remove OnPrEP Status after Expiry OlderW",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                        "New_Property_Value": "",
+                        "Target_Property_Key": "OnPrEP",
+                        "Target_Property_Value": "False",
+                        "class": "PropertyValueChanger"
+                    },
+                    "Target_Age_Max": 49.99999,
+                    "Target_Age_Min": 25,
+                    "Target_Demographic": "ExplicitAgeRangesAndGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "PrEP_Expired"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Remove OnPrEP Status after Expiry OlderM",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2026,
+            "End_Year": 2074,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "BEGIN": "Background Oral PrEP",
+            "END": "Background Oral PrEP",
+            "Event_Coordinator_Config": {
+                "Distributions": [
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2017,
+                    "Num_Targeted_Females": [
+                        393
+                    ],
+                    "Num_Targeted_Males": [
+                        262
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2016,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2018,
+                    "Num_Targeted_Females": [
+                        2626
+                    ],
+                    "Num_Targeted_Males": [
+                        1750
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2017,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2019,
+                    "Num_Targeted_Females": [
+                        7925
+                    ],
+                    "Num_Targeted_Males": [
+                        5283
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2018,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2020,
+                    "Num_Targeted_Females": [
+                        2022
+                    ],
+                    "Num_Targeted_Males": [
+                        1348
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2019,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2021,
+                    "Num_Targeted_Females": [
+                        6926
+                    ],
+                    "Num_Targeted_Males": [
+                        4617
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2020,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2022,
+                    "Num_Targeted_Females": [
+                        10804
+                    ],
+                    "Num_Targeted_Males": [
+                        7203
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2021,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2023,
+                    "Num_Targeted_Females": [
+                        40932
+                    ],
+                    "Num_Targeted_Males": [
+                        27288
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2022,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    },
+                    {
+                    "Age_Ranges_Years": [
+                        {
+                            "Max": 65,
+                            "Min": 15
+                        }
+                    ],
+                    "End_Year": 2065,
+                    "Num_Targeted_Females": [
+                        1719154
+                    ],
+                    "Num_Targeted_Males": [
+                        1146102
+                    ],
+                    "Property_Restrictions_Within_Node": [
+                        {
+                            "Risk": "HIGH"
+                        },
+                        {
+                            "Risk": "MEDIUM"
+                        }
+                    ],
+                    "Start_Year": 2023,
+                    "Target_Disease_State": [
+                        [
+                            "HIV_Negative",
+                            "Not_Have_Intervention"
+                        ]
+                    ],
+                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                    }
+                ],
+                "Intervention_Config": {
+                    "Cost_To_Consumer": 1.0,
+                    "Intervention_Name": "Oral_PrEP",
+                    "Vaccine_Type": "AcquisitionBlocking",
+                    "Waning_Config": {
+                    "Durability_Map": {
+                        "Times": [
+                            0,
+                            90,
+                            91
+                        ],
+                        "Values": [
+                            1,
+                            1,
+                            0
+                        ]
+                    },
+                    "Expire_At_Durability_Map_End": 1,
+                    "Initial_Effect": 0.75,
+                    "class": "WaningEffectMapLinear"
+                    },
+                    "Waning_Config__KP_PrEP_HIGH_Waning": "<-- MARKER",
+                    "class": "ControlledVaccine"
+                },
+                "class": "NChooserEventCoordinatorHIV"
+            },
+            "Event_Name": "NChooser to implement specified number of Oral PrEP uptake",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2015,
+            "class": "CampaignEvent"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                    "Choice_Names": [
+                        "OnART1",
+                        "HCTUptakePostDebut3"
+                    ],
+                    "Choice_Probabilities": [
+                        0.75,
+                        0.25
+                    ],
+                    "Disqualifying_Properties": [
+                        "InterventionStatus:LostForever"
+                    ],
+                    "class": "HIVRandomChoice"
+                    },
+                    "Target_Demographic": "ExplicitGender",
+                    "Target_Gender": "Female",
+                    "Trigger_Condition_List": [
+                    "Refer_to_ART"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Decision to enroll in ART after testing positive at PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2020,
+            "class": "CampaignEventByYear"
+        },
+        {
+            "END": "PREP DISTRIBUTION",
+            "Event_Coordinator_Config": {
+                "Intervention_Config": {
+                    "Actual_IndividualIntervention_Config": {
+                    "Choice_Names": [
+                        "OnART1",
+                        "HCTUptakePostDebut3"
+                    ],
+                    "Choice_Probabilities": [
+                        0.65,
+                        0.35
+                    ],
+                    "Disqualifying_Properties": [
+                        "InterventionStatus:LostForever"
+                    ],
+                    "class": "HIVRandomChoice"
+                    },
+                    "Target_Demographic": "ExplicitGender",
+                    "Target_Gender": "Male",
+                    "Trigger_Condition_List": [
+                        "Refer_to_ART"
+                    ],
+                    "class": "NodeLevelHealthTriggeredIV"
+                },
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Decision to enroll in ART after testing positive at PrEP",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Year": 2020,
             "class": "CampaignEventByYear"
         },
         {
