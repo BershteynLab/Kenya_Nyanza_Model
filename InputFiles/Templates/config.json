@@ -82,6 +82,8 @@
             "PEPFAR_ART_Dropout", 
             "PEPFAR_ART_Continue",
             "HCTTestingPEPFAR_Delayed",
+            "Initiate_Background_PrEP",
+            "Background_PrEP_Expired",
             "Initiate_PrEP_AGYW",
             "Initiate_PrEP_AGYW_l3m",
             "Initiate_PrEP_ABYM",
@@ -205,6 +207,8 @@
         "Report_HIV_ByAgeAndGender_Collect_On_Art_Data": 0,
         ".Report_HIV_ByAgeAndGender_Event_Counter_List": ["GaveBirth"],
         "Report_HIV_ByAgeAndGender_Event_Counter_List": [
+            "Initiate_Background_PrEP",
+            "Background_PrEP_Expired",
             "Initiate_PrEP_AGYW",
             "Initiate_PrEP_AGYW_l3m",
             "Initiate_PrEP_ABYM",
@@ -226,8 +230,8 @@
             "Refer_to_ART"
         ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
-        "Report_HIV_ByAgeAndGender_Start_Year": 1985,
-        "Report_HIV_ByAgeAndGender_Stop_Year": 2025,
+        "Report_HIV_ByAgeAndGender_Start_Year": 2015,
+        "Report_HIV_ByAgeAndGender_Stop_Year": 2074,
         "Report_HIV_ByAgeAndGender_Stratify_Infected_By_CD4": 0,
         "Report_HIV_Event_Channels_List": [],
         "Report_HIV_Infection": 0,
