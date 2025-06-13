@@ -2371,8 +2371,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0038,
+                        0.0038,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_AGYW": "<==marker"
@@ -2474,8 +2474,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.007,
+                        0.007,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_AGYW_l3m": "<==marker"
@@ -2584,8 +2584,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.009,
+                        0.009,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_ABYM": "<==marker"
@@ -2693,8 +2693,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0128,
+                        0.0128,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_ABYM_l3m": "<==marker"
@@ -2797,8 +2797,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0167,
+                        0.0167,
                         0.0
                     ],
                 "Values__KP__PrEP_scaleup_OlderW": "<==marker"
@@ -2901,8 +2901,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0325,
+                        0.0325,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_sd": "<==marker"
@@ -3004,8 +3004,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.029,
+                        0.029,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_l3m": "<==marker"
@@ -3107,8 +3107,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.055,
+                        0.055,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_l3m_sd": "<==marker"
@@ -3211,8 +3211,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0115,
+                        0.0115,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM": "<==marker"
@@ -3315,8 +3315,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.0175,
+                        0.0175,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM_sd": "<==marker"
@@ -3418,8 +3418,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.015,
+                        0.015,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM_l3m": "<==marker"
@@ -3521,8 +3521,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.6,
-                        0.6,
+                        0.028,
+                        0.028,
                         0.0
                     ],
                 "Values__KP__PrEP_scaleup_OlderM_l3m_sd": "<==marker"
@@ -4070,8 +4070,8 @@
                             "No_return_for_PrEP"
                         ],
                         "Choice_Probabilities": [
-                            0.5,
-                            0.5
+                            0.3,
+                            0.7
                         ],
                         "Choice_Probabilities__KP__PrEP_Return": "<==marker",
                         "class": "HIVRandomChoice"
@@ -4763,128 +4763,128 @@
                     "Target_Disease_State_Has_Intervention_Name": "PrEP"
                     },
                     {
-                    "Age_Ranges_Years": [
-                        {
-                            "Max": 65,
-                            "Min": 15
-                        }
-                    ],
-                    "End_Year": 2021,
-                    "Num_Targeted_Females": [
-                        6926
-                    ],
-                    "Num_Targeted_Males": [
-                        4617
-                    ],
-                    "Property_Restrictions_Within_Node": [
-                        {
-                            "Risk": "HIGH"
-                        },
-                        {
-                            "Risk": "MEDIUM"
-                        }
-                    ],
-                    "Start_Year": 2020,
-                    "Target_Disease_State": [
-                        [
-                            "HIV_Negative",
-                            "Not_Have_Intervention"
-                        ]
-                    ],
-                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                        "Age_Ranges_Years": [
+                            {
+                                "Max": 65,
+                                "Min": 15
+                            }
+                        ],
+                        "End_Year": 2021,
+                        "Num_Targeted_Females": [
+                            6926
+                        ],
+                        "Num_Targeted_Males": [
+                            4617
+                        ],
+                        "Property_Restrictions_Within_Node": [
+                            {
+                                "Risk": "HIGH"
+                            },
+                            {
+                                "Risk": "MEDIUM"
+                            }
+                        ],
+                        "Start_Year": 2020,
+                        "Target_Disease_State": [
+                            [
+                                "HIV_Negative",
+                                "Not_Have_Intervention"
+                            ]
+                        ],
+                        "Target_Disease_State_Has_Intervention_Name": "PrEP"
                     },
                     {
-                    "Age_Ranges_Years": [
-                        {
-                            "Max": 65,
-                            "Min": 15
-                        }
-                    ],
-                    "End_Year": 2022,
-                    "Num_Targeted_Females": [
-                        10804
-                    ],
-                    "Num_Targeted_Males": [
-                        7203
-                    ],
-                    "Property_Restrictions_Within_Node": [
-                        {
-                            "Risk": "HIGH"
-                        },
-                        {
-                            "Risk": "MEDIUM"
-                        }
-                    ],
-                    "Start_Year": 2021,
-                    "Target_Disease_State": [
-                        [
-                            "HIV_Negative",
-                            "Not_Have_Intervention"
-                        ]
-                    ],
-                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                        "Age_Ranges_Years": [
+                            {
+                                "Max": 65,
+                                "Min": 15
+                            }
+                        ],
+                        "End_Year": 2022,
+                        "Num_Targeted_Females": [
+                            10804
+                        ],
+                        "Num_Targeted_Males": [
+                            7203
+                        ],
+                        "Property_Restrictions_Within_Node": [
+                            {
+                                "Risk": "HIGH"
+                            },
+                            {
+                                "Risk": "MEDIUM"
+                            }
+                        ],
+                        "Start_Year": 2021,
+                        "Target_Disease_State": [
+                            [
+                                "HIV_Negative",
+                                "Not_Have_Intervention"
+                            ]
+                        ],
+                        "Target_Disease_State_Has_Intervention_Name": "PrEP"
                     },
                     {
-                    "Age_Ranges_Years": [
-                        {
-                            "Max": 65,
-                            "Min": 15
-                        }
-                    ],
-                    "End_Year": 2023,
-                    "Num_Targeted_Females": [
-                        40932
-                    ],
-                    "Num_Targeted_Males": [
-                        27288
-                    ],
-                    "Property_Restrictions_Within_Node": [
-                        {
-                            "Risk": "HIGH"
-                        },
-                        {
-                            "Risk": "MEDIUM"
-                        }
-                    ],
-                    "Start_Year": 2022,
-                    "Target_Disease_State": [
-                        [
-                            "HIV_Negative",
-                            "Not_Have_Intervention"
-                        ]
-                    ],
-                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                        "Age_Ranges_Years": [
+                            {
+                                "Max": 65,
+                                "Min": 15
+                            }
+                        ],
+                        "End_Year": 2023,
+                        "Num_Targeted_Females": [
+                            40932
+                        ],
+                        "Num_Targeted_Males": [
+                            27288
+                        ],
+                        "Property_Restrictions_Within_Node": [
+                            {
+                                "Risk": "HIGH"
+                            },
+                            {
+                                "Risk": "MEDIUM"
+                            }
+                        ],
+                        "Start_Year": 2022,
+                        "Target_Disease_State": [
+                            [
+                                "HIV_Negative",
+                                "Not_Have_Intervention"
+                            ]
+                        ],
+                        "Target_Disease_State_Has_Intervention_Name": "PrEP"
                     },
                     {
-                    "Age_Ranges_Years": [
-                        {
-                            "Max": 65,
-                            "Min": 15
-                        }
-                    ],
-                    "End_Year": 2065,
-                    "Num_Targeted_Females": [
-                        1719154
-                    ],
-                    "Num_Targeted_Males": [
-                        1146102
-                    ],
-                    "Property_Restrictions_Within_Node": [
-                        {
-                            "Risk": "HIGH"
-                        },
-                        {
-                            "Risk": "MEDIUM"
-                        }
-                    ],
-                    "Start_Year": 2023,
-                    "Target_Disease_State": [
-                        [
-                            "HIV_Negative",
-                            "Not_Have_Intervention"
-                        ]
-                    ],
-                    "Target_Disease_State_Has_Intervention_Name": "PrEP"
+                        "Age_Ranges_Years": [
+                            {
+                                "Max": 65,
+                                "Min": 15
+                            }
+                        ],
+                        "End_Year": 2074,
+                        "Num_Targeted_Females": [
+                            2686178
+                        ],
+                        "Num_Targeted_Males": [
+                            1790784
+                        ],
+                        "Property_Restrictions_Within_Node": [
+                            {
+                                "Risk": "HIGH"
+                            },
+                            {
+                                "Risk": "MEDIUM"
+                            }
+                        ],
+                        "Start_Year": 2023,
+                        "Target_Disease_State": [
+                            [
+                                "HIV_Negative",
+                                "Not_Have_Intervention"
+                            ]
+                        ],
+                        "Target_Disease_State_Has_Intervention_Name": "PrEP"
                     }
                 ],
                 "Intervention_Config": {
