@@ -207,10 +207,11 @@
         "Report_HIV_ByAgeAndGender_Collect_On_Art_Data": 0,
         ".Report_HIV_ByAgeAndGender_Event_Counter_List": ["GaveBirth"],
         "Report_HIV_ByAgeAndGender_Event_Counter_List": [
-            "Initiate_Background_PrEP",
             "Program_VMMC",
             "GaveBirth",
-            "Initiate_Background_PrEP"
+            "Initiate_Background_PrEP",
+            "New_PrEP_Initiated",
+            "PrEP_followup"
         ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
         "Report_HIV_ByAgeAndGender_Start_Year": 1985,
