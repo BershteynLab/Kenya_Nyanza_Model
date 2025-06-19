@@ -1,2 +1,3 @@
 Scenario,Campaign
-hivcontrol_statusquo,campaign_Nyanza_baseline_20250606_PrEP.json
+hivcontrol_baseline,campaign_Nyanza_20250606_HIVControl_baseline_noprevention.json
+hivcontrol_statusquo,campaign_Malawi_20250617_PrEP.json

@@ -10,7 +10,7 @@
 #SBATCH --partition=a100_dev
 #SBATCH --mem=8GB
 
-#SBATCH --job-name=KEN_PEPFAR
+#SBATCH --job-name=KEN_HIVControl
 #SBATCH --chdir=/gpfs/data/bershteynlab/EMOD/citrod01/KEN_202301_Nyanza_Baseline_MalariaOngoing
 
 #SBATCH --mail-type=END

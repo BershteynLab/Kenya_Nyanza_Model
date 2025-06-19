@@ -2331,8 +2331,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0038,
-                        0.0038,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_AGYW": "<==marker"
@@ -2434,8 +2434,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.007,
-                        0.007,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_AGYW_l3m": "<==marker"
@@ -2544,8 +2544,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.009,
-                        0.009,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_ABYM": "<==marker"
@@ -2653,8 +2653,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0128,
-                        0.0128,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_ABYM_l3m": "<==marker"
@@ -2757,8 +2757,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0167,
-                        0.0167,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                 "Values__KP__PrEP_scaleup_OlderW": "<==marker"
@@ -2861,8 +2861,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0325,
-                        0.0325,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_sd": "<==marker"
@@ -2964,8 +2964,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.029,
-                        0.029,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_l3m": "<==marker"
@@ -3067,8 +3067,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.055,
-                        0.055,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderW_l3m_sd": "<==marker"
@@ -3171,8 +3171,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0115,
-                        0.0115,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM": "<==marker"
@@ -3275,8 +3275,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.0175,
-                        0.0175,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM_sd": "<==marker"
@@ -3378,8 +3378,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.015,
-                        0.015,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                     "Values__KP__PrEP_scaleup_OlderM_l3m": "<==marker"
@@ -3481,8 +3481,8 @@
                     ],
                     "Values": [
                         0.0,
-                        0.028,
-                        0.028,
+                        0.0,
+                        0.0,
                         0.0
                     ],
                 "Values__KP__PrEP_scaleup_OlderM_l3m_sd": "<==marker"
@@ -4822,12 +4822,12 @@
                                 "Min": 15
                             }
                         ],
-                        "End_Year": 2074,
+                        "End_Year": 2024,
                         "Num_Targeted_Females": [
-                            2686178
+                            40932
                         ],
                         "Num_Targeted_Males": [
-                            1790784
+                            27288
                         ],
                         "Property_Restrictions_Within_Node": [
                             {
