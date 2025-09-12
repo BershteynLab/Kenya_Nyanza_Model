@@ -49,6 +49,12 @@
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
                 },
+                {
+                    "Property": "OnPrEP_CAB",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
 				{
                     "Property": "WillingToStartARTFromPrEPCampaign",
                     "Values": [ "NO", "YES" ],
@@ -164,6 +170,12 @@
                 },
                 {
                     "Property": "OnPrEP",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
+                {
+                    "Property": "OnPrEP_CAB",
                     "Values": ["False", "True"],
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
@@ -302,6 +314,12 @@
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
                 },
+                {
+                    "Property": "OnPrEP_CAB",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
 				{
                     "Property": "WillingToStartARTFromPrEPCampaign",
                     "Values": [ "NO", "YES" ],
@@ -432,6 +450,12 @@
                 },
                 {
                     "Property": "OnPrEP",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
+                {
+                    "Property": "OnPrEP_CAB",
                     "Values": ["False", "True"],
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
@@ -570,6 +594,12 @@
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
                 },
+                {
+                    "Property": "OnPrEP_CAB",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
 				{
                     "Property": "WillingToStartARTFromPrEPCampaign",
                     "Values": [ "NO", "YES" ],
@@ -700,6 +730,12 @@
                 },
                 {
                     "Property": "OnPrEP",
+                    "Values": ["False", "True"],
+                    "Initial_Distribution": [1, 0],
+                    "Transitions": []
+                },
+                {
+                    "Property": "OnPrEP_CAB",
                     "Values": ["False", "True"],
                     "Initial_Distribution": [1, 0],
                     "Transitions": []
