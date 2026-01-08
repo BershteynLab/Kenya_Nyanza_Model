@@ -110,7 +110,9 @@
             "Initiate_Intervention_PrEP_CAB",
             "Intervention_PrEP_CAB_Expired",
             "Initiate_Background_PrEP",
-            "Background_PrEP_Expired"
+            "Background_PrEP_Expired",
+            "OnART1_defaulter_tracer",
+            "OnART3_rundropout"
         ],
         "Custom_Node_Events": [],
         "Custom_Reports_Filename": "",
@@ -219,8 +221,9 @@
             "Initiate_Background_PrEP",
             "Initiate_Intervention_PrEP_TDF",
             "Initiate_Intervention_PrEP_CAB",
-            "New_PrEP_Initiated",
-            "PrEP_followup"
+            "PrEP_Choice_AGYW",
+            "PrEP_Choice_FSW",
+            "OnART1_defaulter_tracer"
         ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
         "Report_HIV_ByAgeAndGender_Start_Year": 1985,
