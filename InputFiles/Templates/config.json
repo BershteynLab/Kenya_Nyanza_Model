@@ -224,7 +224,9 @@
             "Initiate_Intervention_PrEP_CAB",
             "PrEP_Choice_AGYW",
             "PrEP_Choice_FSW",
-            "OnART1_defaulter_tracer"
+            "OnART1_defaulter_tracer",
+            "Needs_PMTCT_Diagnostic_Test",
+            "HCTTestingLoop1"
         ],
         "Report_HIV_ByAgeAndGender_Has_Intervention_With_Name": "",
         "Report_HIV_ByAgeAndGender_Start_Year": 1985,
