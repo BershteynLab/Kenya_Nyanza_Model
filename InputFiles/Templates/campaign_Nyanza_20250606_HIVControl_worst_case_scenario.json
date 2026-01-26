@@ -3136,9 +3136,7 @@
                                 2012,
                                 2013,
                                 2014,
-                                2015,
-                                2024.999,
-                                2025
+                                2015
                             ],
                             "Values": [
                                 0.09,
@@ -3153,9 +3151,7 @@
                                 0.65,
                                 0.65,
                                 0.65,
-                                0.65,
-                                0.65,
-                                0
+                                0.65
                             ]
                         },
                         "class": "HIVPiecewiseByYearAndSexDiagnostic"
@@ -3290,6 +3286,7 @@
                     "Trigger_Condition_List": [
                         "Needs_PMTCT_Diagnostic_Test"
                     ],
+                    "Duration":13840,
                     "class": "NodeLevelHealthTriggeredIV"
                 },
                 "class": "StandardInterventionDistributionEventCoordinator"
