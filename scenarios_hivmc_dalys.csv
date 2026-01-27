@@ -6,3 +6,4 @@ hivcontrol_dalys_prep_choice_fsw,campaign_Nyanza_20250606_HIVControl_interventio
 hivcontrol_dalys_prep_choice_agyw,campaign_Nyanza_20250606_HIVControl_interventions.json,2099,2099,2099,2099,2024
 hivcontrol_dalys_baseline,campaign_Nyanza_20250606_HIVControl_interventions.json,2099,2099,2099,2099,2099,"[1,0]"
 hivcontrol_dalys_retention,campaign_Nyanza_20250606_HIVControl_interventions.json,2099,2099,2099,2099,2099,"[0,1]"
+hivcontrol_dalys_worst,campaign_Nyanza_20250606_HIVControl_worst_case_scenario.json,2099,2099,2099,2099,2099,"[1,0]"
